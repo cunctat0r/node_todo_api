@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/cunctat0r/node_todo_api/issues"
   },
-  "homepage": "https://github.com/cunctat0r/node_todo_api#readme"
+  "homepage": "https://github.com/cunctat0r/node_todo_api#readme",
+  "dependencies": {
+    "mongodb": "^2.2.28"
+  }
 }
