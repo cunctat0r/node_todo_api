@@ -1,8 +1,4 @@
-var mongoose = require('mongoose');
-
-mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/TodoApp');
-
+var {mongoose} = require('./db/mongoose.js');
 // save new smtg
 var Todo = mongoose.model('Todo', {
   text: {
