@@ -4,12 +4,12 @@
   "description": "NodeJS TODO API from Udemy course",
   "main": "index.js",
   "scripts": {
-    "start" : "node server/server.js",
+    "start": "node server/server.js",
     "test": "mocha server/**/*.test.js",
-    "test-watch" : "nodemon --exec 'npm test'"
+    "test-watch": "nodemon --exec 'npm test'"
   },
-  "engines" : {
-    "node" : "6.10.3"
+  "engines": {
+    "node": "6.10.3"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
+    "lodash": "^4.17.4",
     "mongodb": "^2.2.28",
     "mongoose": "^4.11.0"
   },
