@@ -103,6 +103,24 @@ app.post('/users', (req, res) => {
   });
 });
 
+app.post('/users/login', (req, res) => {
+  var body = _.pick(req.body, ['email', 'password']);
+
+//  res.send(body);
+
+  User.findByCredentials(body.email, body.password).then((user) => {
+    if (!user) {
+      return Promise.reject();
+    }
+    return user.generateAuthToken().then((token) => {
+      res.header('x-auth', token).send(user); 
+    });
+  }).catch((e) => {
+    res.status(400).send();
+  });
+
+});
+
 var authenticate = (req, res, next) => {
   var token = req.header('x-auth');
 
